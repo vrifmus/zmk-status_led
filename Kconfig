@@ -1,5 +1,5 @@
 config STATUS_LED
-    bool "Enable RGB LED widget for showing battery and output status"
+    bool "Enable STATUS LED for showing battery and output status"
 
 if STATUS_LED
 

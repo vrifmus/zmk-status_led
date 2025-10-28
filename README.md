@@ -9,7 +9,7 @@ Module uses LED's behavior code from [Kabarga](https://github.com/aroum/kabarga)
 
 ### Adjust your west.yaml to use the module
 
-Add module to the `config/west.yml`:
+Add the module to the `config/west.yml`:
 
 ```diff
 manifest:
@@ -33,7 +33,7 @@ manifest:
 
 ### Adjust your shield.conf file
 
-Activate module in `config/<name>.conf`:
+Activate the module in `config/<name>.conf`:
 
 ```diff
 ...
@@ -44,7 +44,7 @@ CONFIG_BT_MAX_PAIRED=3
 +CONFIG_STATUS_LED=y
 ```
 
-### Create definitions include file
+### Create the definitions file
 
 Create `config/status_led.dtsi` file:
 
@@ -99,7 +99,7 @@ Create `config/status_led.dtsi` file:
 };
 ```
 
-Adjust pins and include file on your `config/<name>.overlay`:
+Adjust pins and include the file in your `config/<name>.overlay`:
 
 ```diff
 #include "<name>.dtsi"
@@ -108,11 +108,11 @@ Adjust pins and include file on your `config/<name>.overlay`:
 
 ## Showing battery level on demand
 
-For checking battery level on demand you need add behavior to your keymap and use keycode.
+For checking battery level on demand you need add a behavior to your keymap and bind it to a key.
 
 ### Include behavior
 
-Include behavior file in your `config/<name>.keymap`:
+Include the behavior file in your `config/<name>.keymap`:
 
 ```diff
 #include <behaviors.dtsi>
@@ -120,7 +120,7 @@ Include behavior file in your `config/<name>.keymap`:
 +#include <behaviors/status_led.dtsi>
 ```
 
-### Bind keycode
+### Bind behavior to a key
 
 Use `&ind_bat` in your `config/<name>.keymap`:
 

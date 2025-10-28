@@ -50,8 +50,6 @@ static const struct behavior_driver_api behavior_status_led_driver_api = {
 #define STATUSLEDIND_INST(n)                                                                                \
     static struct behavior_status_led_config behavior_status_led_config_##n = {                       \
         .indicate_battery = DT_INST_PROP(n, indicate_battery),                                        \
-        .indicate_connectivity = DT_INST_PROP(n, indicate_connectivity),                              \
-        .indicate_layer = DT_INST_PROP(n, indicate_layer),                                            \
     };                                                                                                \
     BEHAVIOR_DT_INST_DEFINE(n, behavior_status_led_init, NULL, NULL, &behavior_status_led_config_##n, \
                             POST_KERNEL, CONFIG_KERNEL_INIT_PRIORITY_DEFAULT,                         \

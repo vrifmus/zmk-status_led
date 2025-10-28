@@ -1,3 +1,4 @@
 target_sources_ifdef(CONFIG_STATUS_LED app PRIVATE src/status_led.c)
+target_sources_ifdef(CONFIG_ZMK_BEHAVIOR_STATUS_LED app PRIVATE src/behaviors/behavior_status_led.c)
 
 zephyr_include_directories(include)

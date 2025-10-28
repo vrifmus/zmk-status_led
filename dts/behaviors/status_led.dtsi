@@ -1,0 +1,9 @@
+/ {
+    behaviors {
+        /omit-if-no-ref/ ind_bat: ind_bat {
+            compatible = "zmk,behavior-status-led";
+            #binding-cells = <0>;
+            indicate-battery;
+        };
+    };
+};

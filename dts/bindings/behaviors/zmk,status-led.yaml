@@ -1,0 +1,9 @@
+description: Satus LED indicator behavior
+
+compatible: "zmk,behavior-status-led"
+
+include: zero_param.yaml
+
+properties:
+  indicate-battery:
+    type: boolean

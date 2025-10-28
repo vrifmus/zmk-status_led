@@ -47,7 +47,7 @@ static const struct behavior_driver_api behavior_status_led_driver_api = {
 #endif // IS_ENABLED(CONFIG_ZMK_BEHAVIOR_METADATA)
 };
 
-#define STATUSLEDIND_INST(n)                                                                                \
+#define STATUSIND_INST(n)                                                                          \
     static struct behavior_status_led_config behavior_status_led_config_##n = {                       \
         .indicate_battery = DT_INST_PROP(n, indicate_battery),                                        \
     };                                                                                                \
@@ -55,4 +55,4 @@ static const struct behavior_driver_api behavior_status_led_driver_api = {
                             POST_KERNEL, CONFIG_KERNEL_INIT_PRIORITY_DEFAULT,                         \
                             &behavior_status_led_driver_api);
 
-DT_INST_FOREACH_STATUS_OKAY(STATUSLED)
+DT_INST_FOREACH_STATUS_OKAY(STATUSIND_INST)

@@ -15,7 +15,7 @@ config ZMK_BATTERY_REPORTING
 endif # STATUS_LED
 
 
-DT_COMPAT_ZMK_BEHAVIOR_STATUS_LED := zmk,behavior-statud-led
+DT_COMPAT_ZMK_BEHAVIOR_STATUS_LED := zmk,behavior-status-led
 
 config ZMK_BEHAVIOR_STATUS_LED
     bool

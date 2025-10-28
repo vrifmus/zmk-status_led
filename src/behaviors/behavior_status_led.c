@@ -6,7 +6,7 @@
 
 #include <zmk/behavior.h>
 
-#include <zmk_status_led/widget.h>
+#include <zmk_status_led/status_led.h>
 
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 

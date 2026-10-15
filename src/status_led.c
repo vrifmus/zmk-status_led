@@ -208,7 +208,7 @@ void battery_animation_handler(struct k_work *work) {
 }
 K_WORK_DELAYABLE_DEFINE(battery_animation_work, battery_animation_handler);
 
-static int initialize_leds(const struct device *dev) {
+static int initialize_leds(void) {
     turn_off_all_leds();
     k_work_queue_init(&animation_work_q);
 
